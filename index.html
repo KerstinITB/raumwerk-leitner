@@ -1,0 +1,218 @@
+export default function RaumwerkLeitnerWebsite() {
+  return (
+    <div className="min-h-screen bg-white text-slate-900">
+      <header className="border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-6 py-5 flex items-center justify-between">
+          <div>
+            <div className="text-2xl font-semibold tracking-tight">Raumwerk Leitner</div>
+            <div className="text-sm text-slate-600">Planung & Projektbetreuung für Bauvorhaben</div>
+          </div>
+          <nav className="hidden md:flex gap-8 text-sm text-slate-700">
+            <a href="#leistungen" className="hover:text-slate-900">Leistungen</a>
+            <a href="#ueber-uns" className="hover:text-slate-900">Über uns</a>
+            <a href="#ablauf" className="hover:text-slate-900">Ablauf</a>
+            <a href="#kontakt" className="hover:text-slate-900">Kontakt</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100" />
+          <div className="relative mx-auto max-w-7xl px-6 py-24 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex rounded-full border border-slate-300 px-4 py-1 text-sm text-slate-700 mb-6">
+                Verlässlich geplant. Sorgfältig betreut.
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight">
+                Bauprojekte mit Struktur, Qualität und persönlicher Begleitung.
+              </h1>
+              <p className="mt-6 text-lg text-slate-600 max-w-xl leading-8">
+                Raumwerk Leitner begleitet Bauvorhaben von der ersten Idee bis zur Umsetzung – mit klarer Planung,
+                koordinierter Durchführung und einem zuverlässigen Blick für Termine, Qualität und Kosten.
+              </p>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#kontakt"
+                  className="rounded-2xl bg-slate-900 px-6 py-3 text-white text-sm font-medium shadow hover:bg-slate-800"
+                >
+                  Projekt anfragen
+                </a>
+                <a
+                  href="#leistungen"
+                  className="rounded-2xl border border-slate-300 px-6 py-3 text-sm font-medium text-slate-800 hover:bg-slate-50"
+                >
+                  Leistungen ansehen
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/60">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-2xl bg-slate-100 p-5">
+                    <div className="text-sm text-slate-500">Schwerpunkt</div>
+                    <div className="mt-2 text-lg font-semibold">Bauplanung</div>
+                  </div>
+                  <div className="rounded-2xl bg-slate-100 p-5">
+                    <div className="text-sm text-slate-500">Begleitung</div>
+                    <div className="mt-2 text-lg font-semibold">Projektbetreuung</div>
+                  </div>
+                  <div className="rounded-2xl bg-slate-100 p-5">
+                    <div className="text-sm text-slate-500">Fokus</div>
+                    <div className="mt-2 text-lg font-semibold">Termine & Qualität</div>
+                  </div>
+                  <div className="rounded-2xl bg-slate-100 p-5">
+                    <div className="text-sm text-slate-500">Anspruch</div>
+                    <div className="mt-2 text-lg font-semibold">Persönlich & klar</div>
+                  </div>
+                </div>
+                <div className="mt-6 rounded-2xl border border-slate-200 p-6">
+                  <p className="text-slate-700 leading-7">
+                    „Wir schaffen tragfähige Lösungen für Bauprojekte – durch saubere Planung, transparente Abstimmung
+                    und eine Betreuung, auf die sich unsere Auftraggeber verlassen können.“
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="leistungen" className="mx-auto max-w-7xl px-6 py-20">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Leistungen</h2>
+            <p className="mt-4 text-slate-600 leading-8">
+              Wir unterstützen Bauherren, Unternehmen und Projektpartner mit einer strukturierten Planung und einer
+              zuverlässigen Betreuung während der Durchführung.
+            </p>
+          </div>
+
+          <div className="mt-12 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'Projektplanung',
+                text: 'Strukturierte Vorbereitung von Bauvorhaben mit Blick auf Machbarkeit, Abläufe und klare Anforderungen.',
+              },
+              {
+                title: 'Koordination',
+                text: 'Abstimmung zwischen Beteiligten, transparente Kommunikation und verlässliche Steuerung der nächsten Schritte.',
+              },
+              {
+                title: 'Begleitung der Umsetzung',
+                text: 'Betreuung in der Ausführung mit Fokus auf Termine, Qualität und die saubere Umsetzung der Planung.',
+              },
+              {
+                title: 'Projektkontrolle',
+                text: 'Unterstützung bei der Überwachung von Projektfortschritt, offenen Punkten und notwendigen Entscheidungen.',
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-shadow bg-white">
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="mt-3 text-slate-600 leading-7">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="ueber-uns" className="bg-slate-50 border-y border-slate-200">
+          <div className="mx-auto max-w-7xl px-6 py-20 grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Über Raumwerk Leitner</h2>
+              <p className="mt-5 text-slate-600 leading-8">
+                Raumwerk Leitner steht für eine professionelle und persönliche Betreuung von Bauprojekten. Der Anspruch
+                ist es, Vorhaben nicht nur zu planen, sondern sie auch mit Sorgfalt, Übersicht und Verlässlichkeit durch
+                die Umsetzung zu begleiten.
+              </p>
+              <p className="mt-4 text-slate-600 leading-8">
+                Dabei stehen klare Kommunikation, nachvollziehbare Prozesse und eine lösungsorientierte Zusammenarbeit im
+                Mittelpunkt. So entstehen Projekte, die strukturiert vorbereitet und sicher begleitet werden.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-5">
+              {[
+                'Persönliche Betreuung',
+                'Klare Projektstrukturen',
+                'Zuverlässige Abstimmung',
+                'Fokus auf Qualität',
+              ].map((point) => (
+                <div key={point} className="rounded-2xl bg-white border border-slate-200 p-6">
+                  <div className="text-lg font-medium">{point}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="ablauf" className="mx-auto max-w-7xl px-6 py-20">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">So läuft die Zusammenarbeit ab</h2>
+            <p className="mt-4 text-slate-600 leading-8">
+              Ein klarer Ablauf schafft Sicherheit und Transparenz – von der ersten Anfrage bis zur laufenden Betreuung.
+            </p>
+          </div>
+
+          <div className="mt-12 grid md:grid-cols-4 gap-6">
+            {[
+              ['01', 'Erstgespräch', 'Aufnahme des Projekts, der Anforderungen und der Zielsetzung.'],
+              ['02', 'Planung', 'Strukturierung des Vorhabens und Definition der nächsten Schritte.'],
+              ['03', 'Koordination', 'Abstimmung mit Beteiligten und Begleitung der Durchführung.'],
+              ['04', 'Betreuung', 'Laufende Überwachung und Unterstützung bis zum Projektfortschritt.'],
+            ].map(([num, title, text]) => (
+              <div key={num} className="rounded-3xl border border-slate-200 p-6 bg-white">
+                <div className="text-sm font-medium text-slate-500">{num}</div>
+                <h3 className="mt-3 text-xl font-semibold">{title}</h3>
+                <p className="mt-3 text-slate-600 leading-7">{text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="kontakt" className="bg-slate-900 text-white">
+          <div className="mx-auto max-w-7xl px-6 py-20 grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Kontakt</h2>
+              <p className="mt-5 text-slate-300 leading-8 max-w-xl">
+                Sie planen ein Bauprojekt und wünschen sich eine strukturierte Begleitung? Nehmen Sie Kontakt auf – wir
+                freuen uns auf Ihre Anfrage.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white/10 border border-white/10 p-8 backdrop-blur-sm">
+              <div className="space-y-4 text-slate-100">
+                <div>
+                  <div className="text-sm text-slate-300">Unternehmen</div>
+                  <div className="text-lg font-medium">Raumwerk Leitner</div>
+                </div>
+                <div>
+                  <div className="text-sm text-slate-300">Leistung</div>
+		  <div className="text-lg font-medium">Planung & Projektbetreuung</div>
+                </div>
+ 		<div>
+                  <div className="text-sm text-slate-300">Adresse</div>                  
+                  <div className="text-lg font-medium">Sebastian-Bauer-Str. 8</div>
+		  <div className="text-lg font-medium">81737 München</div>
+                </div>
+                <div>
+                  <div className="text-sm text-slate-300">E-Mail</div>
+                  <div className="text-lg font-medium">info@raumwerk-leitner.de</div>
+                </div>
+                <div>
+                  <div className="text-sm text-slate-300">Telefon</div>
+                  <div className="text-lg font-medium">+49 (0) 173 5971623</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-slate-200 bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col md:flex-row gap-3 md:items-center md:justify-between text-sm text-slate-500">
+          <div>© 2026 Raumwerk Leitner</div>
+          <div>Planung & Projektbetreuung für Bauvorhaben</div>
+        </div>
+      </footer>
+    </div>
+  );
+}
